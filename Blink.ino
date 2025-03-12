@@ -37,8 +37,12 @@ void loop() {
     return;
   }
 
-  Serial.print("Temperature: "); Serial.print(temp); Serial.println(" °C");// Used to print out temperature on serial monotir
-  Serial.print("Humidity: "); Serial.print(hum); Serial.println(" %");// Used to print out humidity on serial monitor
+  Serial.print("Temperature: "); 
+  Serial.print(temp); 
+  Serial.println(" °C");// Used to print out temperature on serial monotir
+  Serial.print("Humidity: "); 
+  Serial.print(hum); // Used to print out humidity on serial monitor
+  Serial.println(" %");
 
   
   ThingSpeak.setField(1, temp);//Setting value od first field as temperature as done on thingsspeak
@@ -53,3 +57,4 @@ void loop() {
 
   delay(60000); //I am sending data after every 1 minute
 }
+
